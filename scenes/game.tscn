@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://cocp0uhnaduxp"]
 
-[ext_resource type="Texture2D" uid="uid://b7vy2m1850cw6" path="res://assets/blue_circle_smile.png" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://benjpnel47dwy" path="res://scenes/player.tscn" id="1_uwrxv"]
 
 [node name="Game" type="Node2D" unique_id=852591595]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=397020615]
-position = Vector2(617, 348)
-texture = ExtResource("1_uwrxv")
+[node name="Player" parent="." unique_id=9245583 instance=ExtResource("1_uwrxv")]
+position = Vector2(621, 345)
