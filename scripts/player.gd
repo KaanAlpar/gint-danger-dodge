@@ -1,12 +1,13 @@
 extends CharacterBody2D
 
+var my_variable = Vector2(10, 8)
+var speed = 300.0
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("Hello world!")
-	print("Hello again!")
-	print("Hello for the final time!")
+	print(my_variable.y)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print("Process!")
+	print(speed)
