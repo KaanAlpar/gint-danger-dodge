@@ -57,3 +57,5 @@ shape = SubResource("RectangleShape2D_4ra3w")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=783697094]
 libraries/ = SubResource("AnimationLibrary_5uy6h")
 autoplay = &"move"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

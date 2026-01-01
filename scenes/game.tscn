@@ -34,10 +34,10 @@ shape = SubResource("RectangleShape2D_yqjtg")
 [node name="Enemies" type="Node2D" parent="." unique_id=596120121]
 
 [node name="Enemy" parent="Enemies" unique_id=521205317 instance=ExtResource("3_lnu2h")]
-position = Vector2(884, 52)
+position = Vector2(893, 71)
 
 [node name="Player" parent="." unique_id=9245583 instance=ExtResource("1_uwrxv")]
-position = Vector2(621, 345)
+position = Vector2(60, 360)
 
 [editable path="Walls/Wall3"]
 [editable path="Walls/Wall4"]

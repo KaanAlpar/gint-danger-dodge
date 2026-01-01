@@ -1,7 +1,9 @@
 extends CharacterBody2D
+class_name Player
 
 var my_variable = Vector2(10, 8)
 var speed = 300.0
+var spawn_point = Vector2(60, 360)
 
 func _physics_process(_delta: float) -> void:
 	var direction = Vector2(0,0)
@@ -19,3 +21,6 @@ func _physics_process(_delta: float) -> void:
 	
 	velocity = direction * speed
 	move_and_slide()
+
+func reset_player():
+	global_position = spawn_point
