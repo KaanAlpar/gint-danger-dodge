@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bsfqp0qgpdevr"]
+
+[ext_resource type="PackedScene" uid="uid://chw10etwtlq57" path="res://scenes/enemy.tscn" id="1_fsb3w"]
+[ext_resource type="Texture2D" uid="uid://c6ig1nmjvjjw4" path="res://assets/red_square_angry.png" id="2_or7ri"]
+
+[sub_resource type="Animation" id="Animation_or7ri"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_f3bb0"]
+resource_name = "move"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 600)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_faa20"]
+_data = {
+&"RESET": SubResource("Animation_or7ri"),
+&"move": SubResource("Animation_f3bb0")
+}
+
+[node name="RedEnemy" unique_id=521205317 instance=ExtResource("1_fsb3w")]
+
+[node name="Sprite2D" parent="Area2D" parent_id_path=PackedInt32Array(1726786952) index="0" unique_id=398096494]
+texture = ExtResource("2_or7ri")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=387035615]
+libraries/ = SubResource("AnimationLibrary_faa20")
+autoplay = &"move"

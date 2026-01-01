@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://cocp0uhnaduxp"]
 
 [ext_resource type="PackedScene" uid="uid://benjpnel47dwy" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://bsfqp0qgpdevr" path="res://scenes/red_enemy.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cnqaw1aymitqy" path="res://scenes/wall.tscn" id="2_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://chw10etwtlq57" path="res://scenes/enemy.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://dwfroms6n77yc" path="res://scenes/yellow_enemy.tscn" id="3_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://uallk8ou03bb" path="res://scenes/green_enemy.tscn" id="4_iywne"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yqjtg"]
 size = Vector2(799, 20)
@@ -33,11 +35,39 @@ shape = SubResource("RectangleShape2D_yqjtg")
 
 [node name="Enemies" type="Node2D" parent="." unique_id=596120121]
 
-[node name="Enemy" parent="Enemies" unique_id=521205317 instance=ExtResource("3_lnu2h")]
-position = Vector2(893, 71)
+[node name="RedEnemy" parent="Enemies" unique_id=521205317 instance=ExtResource("2_lnu2h")]
+position = Vector2(192, 52)
+
+[node name="RedEnemy2" parent="Enemies" unique_id=2135659904 instance=ExtResource("2_lnu2h")]
+position = Vector2(320, 667)
+scale = Vector2(1, -1)
+
+[node name="Area2D" parent="Enemies/RedEnemy2" index="0" unique_id=1726786952]
+rotation = 3.1415927
+
+[node name="RedEnemy3" parent="Enemies" unique_id=1916614968 instance=ExtResource("2_lnu2h")]
+position = Vector2(450, 52)
+
+[node name="YellowEnemy" parent="Enemies" unique_id=1653108012 instance=ExtResource("3_lbhrr")]
+position = Vector2(646, 57)
+
+[node name="YellowEnemy2" parent="Enemies" unique_id=441433408 instance=ExtResource("3_lbhrr")]
+position = Vector2(1137, 173)
+scale = Vector2(-1, 1)
+
+[node name="YellowEnemy3" parent="Enemies" unique_id=458203699 instance=ExtResource("3_lbhrr")]
+position = Vector2(646, 292)
+
+[node name="GreenEnemy" parent="Enemies" unique_id=1519617562 instance=ExtResource("4_iywne")]
+position = Vector2(656, 466)
+
+[node name="GreenEnemy2" parent="Enemies" unique_id=1421947759 instance=ExtResource("4_iywne")]
+position = Vector2(1200, 466)
+scale = Vector2(-1, 1)
 
 [node name="Player" parent="." unique_id=9245583 instance=ExtResource("1_uwrxv")]
 position = Vector2(60, 360)
 
 [editable path="Walls/Wall3"]
 [editable path="Walls/Wall4"]
+[editable path="Enemies/RedEnemy2"]
