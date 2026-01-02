@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://uallk8ou03bb"]
 
 [ext_resource type="PackedScene" uid="uid://chw10etwtlq57" path="res://scenes/enemy.tscn" id="1_pi4x2"]
-[ext_resource type="Texture2D" uid="uid://cy0os2op1a3i5" path="res://assets/green_enemy.png" id="2_8d6nc"]
+[ext_resource type="Texture2D" uid="uid://cy0os2op1a3i5" path="res://assets/textures/green_enemy.png" id="2_8d6nc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yk8el"]
 size = Vector2(46, 40)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dwfroms6n77yc"]
 
 [ext_resource type="PackedScene" uid="uid://chw10etwtlq57" path="res://scenes/enemy.tscn" id="1_tgq7m"]
-[ext_resource type="Texture2D" uid="uid://dvtl2tjd65von" path="res://assets/yellow_enemy.png" id="2_4hmfy"]
+[ext_resource type="Texture2D" uid="uid://dvtl2tjd65von" path="res://assets/textures/yellow_enemy.png" id="2_4hmfy"]
 
 [sub_resource type="Animation" id="Animation_2uwp8"]
 length = 0.001

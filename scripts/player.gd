@@ -24,3 +24,4 @@ func _physics_process(_delta: float) -> void:
 
 func reset_player():
 	global_position = spawn_point
+	$HitSound.play()

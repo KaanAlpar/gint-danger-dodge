@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dlhuv3ubm8ukt" path="res://scripts/game.gd" id="1_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://benjpnel47dwy" path="res://scenes/player.tscn" id="1_uwrxv"]
-[ext_resource type="Texture2D" uid="uid://bphk0dmmq8m1e" path="res://assets/blue_bg.png" id="2_gee14"]
+[ext_resource type="AudioStream" uid="uid://bgl17wk43gsb6" path="res://assets/audio/bg_music.ogg" id="2_0tnpc"]
+[ext_resource type="Texture2D" uid="uid://bphk0dmmq8m1e" path="res://assets/textures/blue_bg.png" id="2_gee14"]
 [ext_resource type="PackedScene" uid="uid://bsfqp0qgpdevr" path="res://scenes/red_enemy.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cnqaw1aymitqy" path="res://scenes/wall.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dwfroms6n77yc" path="res://scenes/yellow_enemy.tscn" id="3_lbhrr"]
@@ -19,6 +20,11 @@ outline_color = Color(0, 0, 0, 1)
 
 [node name="Game" type="Node2D" unique_id=852591595]
 script = ExtResource("1_u5sy4")
+
+[node name="BGMusic" type="AudioStreamPlayer" parent="." unique_id=1551671045]
+stream = ExtResource("2_0tnpc")
+autoplay = true
+parameters/looping = true
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1674520700]
 texture_repeat = 2

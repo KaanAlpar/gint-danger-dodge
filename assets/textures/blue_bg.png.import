@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7vy2m1850cw6"
-path="res://.godot/imported/blue_circle_smile.png-c6808fcbf9809c81c511a6c56a258c5c.ctex"
+uid="uid://bphk0dmmq8m1e"
+path="res://.godot/imported/blue_bg.png-5b337ac43ac0b9ce8b49bf3f15bfd229.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/blue_circle_smile.png"
-dest_files=["res://.godot/imported/blue_circle_smile.png-c6808fcbf9809c81c511a6c56a258c5c.ctex"]
+source_file="res://assets/textures/blue_bg.png"
+dest_files=["res://.godot/imported/blue_bg.png-5b337ac43ac0b9ce8b49bf3f15bfd229.ctex"]
 
 [params]
 

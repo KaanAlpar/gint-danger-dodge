@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bsfqp0qgpdevr"]
 
 [ext_resource type="PackedScene" uid="uid://chw10etwtlq57" path="res://scenes/enemy.tscn" id="1_fsb3w"]
-[ext_resource type="Texture2D" uid="uid://c6ig1nmjvjjw4" path="res://assets/red_square_angry.png" id="2_or7ri"]
+[ext_resource type="Texture2D" uid="uid://c6ig1nmjvjjw4" path="res://assets/textures/red_square_angry.png" id="2_or7ri"]
 
 [sub_resource type="Animation" id="Animation_or7ri"]
 length = 0.001
