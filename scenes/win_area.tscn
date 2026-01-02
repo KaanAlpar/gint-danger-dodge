@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ds8oysumaro4h"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_3alhw"]
+size = Vector2(60, 760)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3alhw"]
+radius = 11.0
+height = 732.0
+
+[node name="WinArea" type="Area2D" unique_id=1441771239]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=995534194]
+modulate = Color(0.100000024, 1, 0, 0.23529412)
+mesh = SubResource("QuadMesh_3alhw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1367200694]
+position = Vector2(9, 0)
+shape = SubResource("CapsuleShape2D_3alhw")
