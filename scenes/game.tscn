@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dlhuv3ubm8ukt" path="res://scripts/game.gd" id="1_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://benjpnel47dwy" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://bphk0dmmq8m1e" path="res://assets/blue_bg.png" id="2_gee14"]
 [ext_resource type="PackedScene" uid="uid://bsfqp0qgpdevr" path="res://scenes/red_enemy.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cnqaw1aymitqy" path="res://scenes/wall.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dwfroms6n77yc" path="res://scenes/yellow_enemy.tscn" id="3_lbhrr"]
@@ -11,8 +12,22 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yqjtg"]
 size = Vector2(799, 20)
 
+[sub_resource type="LabelSettings" id="LabelSettings_gee14"]
+font_size = 120
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Game" type="Node2D" unique_id=852591595]
 script = ExtResource("1_u5sy4")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1674520700]
+texture_repeat = 2
+scale = Vector2(2, 2)
+texture = ExtResource("2_gee14")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 640, 360)
+metadata/_edit_lock_ = true
 
 [node name="Walls" type="Node2D" parent="." unique_id=1257621182]
 
@@ -37,7 +52,7 @@ rotation = 1.5707964
 shape = SubResource("RectangleShape2D_yqjtg")
 
 [node name="WinArea" parent="." unique_id=1441771239 instance=ExtResource("6_p57ef")]
-position = Vector2(119, 361)
+position = Vector2(1251, 361)
 
 [node name="Enemies" type="Node2D" parent="." unique_id=596120121]
 
@@ -73,6 +88,17 @@ scale = Vector2(-1, 1)
 
 [node name="Player" parent="." unique_id=9245583 instance=ExtResource("1_uwrxv")]
 position = Vector2(60, 360)
+
+[node name="YouWinLabel" type="Label" parent="." unique_id=1307732221]
+visible = false
+offset_left = 385.0
+offset_top = 235.0
+offset_right = 893.0
+offset_bottom = 400.0
+text = "You Win!"
+label_settings = SubResource("LabelSettings_gee14")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="body_entered" from="WinArea" to="." method="_on_win_area_body_entered"]
 
